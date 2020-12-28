@@ -17,23 +17,30 @@
     </style>
 </head>
 <body>
-    <div id="Area" onclick="sucesso()" onmouseenter="passandomouse()" onmouseout="saida()">
+    <div id="Area">
         Matheus Klebson
     </div>
 
     <script>
         a = document.getElementById("Area");
+        
+        a.addEventListener("click",sucesso);
+        a.addEventListener("mouseenter",passandomouse);
+        a.addEventListener("mouseout",saida);
 
         function sucesso(){    
-            a.innerText = "Sucesso"           
+            a.innerText = "Sucesso"  
+            a.style.background = "Red"         
         }
 
         function passandomouse(){
             a.innerText = "Pode clicar"
+            
         }
 
         function saida(){
             a.innerText = "Volte sempre"
+            a.style.background = "blue"
         }
     </script>
     
